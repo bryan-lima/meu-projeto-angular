@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -14,6 +14,7 @@ import { MenuComponent } from './navegacao/menu/menu.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { FooterComponent } from './navegacao/footer/footer.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
+import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,13 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
     MenuComponent,
     HomeComponent,
     FooterComponent,
-    SobreComponent
+    SobreComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
   ],
   providers: [
