@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgBrazil } from 'ng-brazil';
 import { TextMaskModule } from 'angular2-text-mask';
+import { CustomFormsModule } from 'ng2-validation';
 
 import { rootRouterConfig } from './app.routes';
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.compo
     ReactiveFormsModule,
     TextMaskModule,
     NgBrazil,
+    CustomFormsModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
   ],
   providers: [
