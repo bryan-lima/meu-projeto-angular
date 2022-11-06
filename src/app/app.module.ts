@@ -4,9 +4,8 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { registerLocaleData } from '@angular/common';
-import localePt from '@angular/common/locales/pt';
-registerLocaleData(localePt);
+import { NgBrazil } from 'ng-brazil';
+import { TextMaskModule } from 'angular2-text-mask';
 
 import { rootRouterConfig } from './app.routes';
 import { AppComponent } from './app.component';
@@ -29,6 +28,8 @@ import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.compo
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    TextMaskModule,
+    NgBrazil,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
   ],
   providers: [
