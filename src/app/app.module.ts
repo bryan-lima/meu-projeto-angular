@@ -8,11 +8,12 @@ import { NgBrazil } from 'ng-brazil';
 import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation';
 
-import { rootRouterConfig } from './app.routes';
 import { AppComponent } from './app.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
+
+import { AppRoutingModule } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
     TextMaskModule,
     NgBrazil,
     CustomFormsModule,
-    [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
+    AppRoutingModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' }
