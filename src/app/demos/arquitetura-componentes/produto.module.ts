@@ -13,6 +13,7 @@ import { ProdutoRoutingModule } from './produto.route';
 import { ProdutoCountComponent } from './components/produto-count.component';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { ProdutoService } from './services/produto.service';
+import { ProdutosResolve } from './services/produto.resolve';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { ProdutoService } from './services/produto.service';
     ],
     providers: [
         ProdutoService,
+        ProdutosResolve
     ],
     exports: []
 })
