@@ -21,7 +21,7 @@ export class BarServices {
   }
 
   obterBebidas(): string {
-    return 'Bebidas';
+    return 'Bebidasss';
   }
 
   obterPorcoes(): string {
@@ -46,4 +46,8 @@ export class BarServicesMock {
   obterRefeicoes(): string {
     return 'Mock';
   }
+}
+
+export abstract class BebidaService {
+  obterBebidas: () => string;
 }
