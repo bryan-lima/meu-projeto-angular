@@ -14,6 +14,7 @@ import { CustomFormsModule } from 'ng2-validation';
 import { AppRoutingModule } from './app.routes';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { BarModule } from './demos/bar-di-zones/bar.module';
+import { TodoModule } from './demos/todo-list/todo.module';
 
 import { AppComponent } from './app.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
@@ -54,7 +55,8 @@ export const BAR_PROVIDERS: Provider[] = [
     BarModule.forRoot({
       unidadeId: 1000,
       unidadeToken: 'bca938c99a0e9ff91029db'
-    })
+    }),
+    TodoModule
   ],
   providers: [
     AuthGuard,

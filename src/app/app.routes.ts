@@ -10,6 +10,7 @@ import { NotFoundComponent } from "./navegacao/not-found/not-found.component";
 import { AuthGuard } from "./services/app.guard";
 import { CadastroGuard } from "./services/cadastro.guard";
 import { BarComponent } from "./demos/bar-di-zones/bar.component";
+import { TodoComponent } from "./demos/todo-list/todo.component";
 
 const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const rootRouterConfig: Routes = [
     { path: 'produtos', loadChildren: () => import('./demos/arquitetura-componentes/produto.module').then(m => m.ProdutoModule) },
     { path: 'filmes', component: FilmesComponent },
     { path: 'bar', component: BarComponent },
+    { path: 'todo', component: TodoComponent },
     {
         path: 'admin', 
         loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
