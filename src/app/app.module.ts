@@ -18,6 +18,8 @@ import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.compo
 import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 
+import { FileSizePipe } from './demos/pipes/filmes/filesize.pipe';
+
 import { AppRoutingModule } from './app.routes';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
@@ -27,7 +29,8 @@ import { CadastroGuard } from './services/cadastro.guard';
     AppComponent,
     SobreComponent,
     CadastroComponent,
-    FilmesComponent
+    FilmesComponent,
+    FileSizePipe
   ],
   imports: [
     BrowserModule,
