@@ -32,4 +32,18 @@ export class TasksService {
         this.store.set('todolist', todolist);
       });
   }
+
+  adicionar(task: Task) {
+    this.http.post('http://localhost:3000/todolist', task)
+      .subscribe(() => {
+        const value = this.store.value.todolist;
+
+        task.id = value.slice(-1).pop().id + 1
+        task.finalizado = false;
+        task.iniciado = false;
+
+        value.push(task);
+        this.store.set('todolist', value);
+      });
+  }
 }
