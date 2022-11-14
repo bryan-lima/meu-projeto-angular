@@ -13,6 +13,7 @@
                     <span *ngIf="!item.finalizado && !item.iniciado" class="task-list__iniciado" (click)="toggleItem(i, 'iniciar')"></span>
                     <span *ngIf="item.finalizado && !item.iniciado" class="task-list__retroceder" (click)="toggleItem(i, 'retomar')"></span>
                     <span *ngIf="!item.finalizado && item.iniciado" class="task-list__retroceder" (click)="toggleItem(i, 'cancelar')"></span>
+                    <!-- <span class="task-list__excluir" (click)="excluir(item.id)"></span> -->
                 </td>
             </tr>
         </tbody>

@@ -46,4 +46,15 @@ export class TasksService {
         this.store.set('todolist', value);
       });
   }
+
+  remover(id: number) {
+    this.http
+      .delete(`http://localhost:3000/todolist/${id}`)
+      .subscribe(() => {
+
+        const value = this.store.value.todolist.filter(item => item.id !== id);
+
+        this.store.set('todolist', value);
+      });
+  }
 }
