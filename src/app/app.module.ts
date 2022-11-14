@@ -19,6 +19,7 @@ import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 
 import { FileSizePipe } from './demos/pipes/filmes/filesize.pipe';
+import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
 
 import { AppRoutingModule } from './app.routes';
 import { AuthGuard } from './services/app.guard';
@@ -30,7 +31,8 @@ import { CadastroGuard } from './services/cadastro.guard';
     SobreComponent,
     CadastroComponent,
     FilmesComponent,
-    FileSizePipe
+    FileSizePipe,
+    ImageFormaterPipe
   ],
   imports: [
     BrowserModule,
