@@ -3,5 +3,5 @@ export interface Produto {
     nome: string;
     ativo: boolean;
     valor: number;
-    imagem: string
+    imagem: string;
 }
