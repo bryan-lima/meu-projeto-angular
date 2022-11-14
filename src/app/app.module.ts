@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -23,9 +23,15 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { FileSizePipe } from './demos/pipes/filmes/filesize.pipe';
 import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
 
+import { BarServices } from './demos/bar-di-zones/bar.service';
+
 import { AppRoutingModule } from './app.routes';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
+
+export const BAR_PROVIDERS: Provider[] = [
+  BarServices
+];
 
 @NgModule({
   declarations: [
@@ -50,7 +56,8 @@ import { CadastroGuard } from './services/cadastro.guard';
   ],
   providers: [
     AuthGuard,
-    CadastroGuard
+    CadastroGuard,
+    BAR_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })
